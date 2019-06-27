@@ -77,6 +77,47 @@ console.log(country);
 
 // CLASSES
 
+class Person11 {
+  constructor(name12, age) {
+    this.name = name12;
+    this.age = age;
+  }
+  welcome() {
+    return `Hello, my name is ${this.name}`;
+  }
+}
+
+const person12 = new Person11("Musammil", 20);
+const person21 = new Person11("Yousuf P U", 21);
+console.log(person12, person21);
+console.log(person21.welcome());
+
 // SUBCLASSES
 
+class Customer extends Person11 {
+  constructor(name, age, balance) {
+    super(name, age);
+    this.balance = balance;
+  }
+  info() {
+    return `${this.name} owes $${this.balance}.00`;
+  }
+}
+const customer = new Customer("Vaishnav", 20, 1000);
+console.log(customer);
+console.log(customer.info());
+
 // MODULES
+
+//file 1 (file1.js)
+
+/*export const name = "Jeff";
+export const age = 20;
+export default Person11;
+*/
+
+//file 2 (file2.js)
+
+/*import {name, age} from './file1.js';
+import Person from './file1.js';
+*/
