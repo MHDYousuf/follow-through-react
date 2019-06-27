@@ -17,14 +17,6 @@ console.log(num);
 
 // ARROW FUNCTIONS
 
-function myfunction() {
-  //Regular Function
-  console.log("Hello World");
-}
-
-myfunction();
-
-//Arrow Function
 const myfunction1 = name => console.log(`Hello ${name} from Arrow Function`);
 myfunction1("Yousuf");
 
@@ -51,7 +43,37 @@ console.log(people2);
 
 // SPREAD
 
+const arr = [1, 2, 3];
+const arr2 = [...arr, 4, 5];
+const arr3 = [...arr.filter(num => num != 3)];
+console.log(arr2);
+console.log(arr3);
+
+const person1 = {
+  name: "Yousuf",
+  age: 20
+};
+const Person2 = {
+  ...person1,
+  email: "mohd4yousuf@gmail.com"
+};
+console.log(Person2);
+
 // DESTRUCTURING
+
+const profile = {
+  nameofperson: "Yousuf P U",
+  address: {
+    city: "changaramkulam",
+    country: "India"
+  },
+  skills: "coding"
+};
+
+const { nameofperson, address, skills } = profile;
+const { country } = profile.address;
+console.log(nameofperson, address, skills);
+console.log(country);
 
 // CLASSES
 
