@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import "./Contact.css";
 const Contact = props => {
   const { name, email, phone } = props;
   return (
     <div>
       <h4>{name}</h4>
       <ul>
-        <li>{email}</li>
+        <li id="email">{email}</li>
         <li>{phone}</li>
       </ul>
     </div>
