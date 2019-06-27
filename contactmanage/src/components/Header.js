@@ -1,9 +1,10 @@
 import React from "react";
 
-const Header = () => {
+const Header = props => {
+  const { Heading } = props;
   return (
     <div>
-      <h1>Contact Manager</h1>
+      <h1>{Heading}</h1>
     </div>
   );
 };
