@@ -4,9 +4,22 @@ import PropTypes from "prop-types";
 const Header = props => {
   const { Heading } = props;
   return (
-    <div>
-      <h1 style={headingStyle}>{Heading}</h1>
-    </div>
+    <nav className="navbar navbar-expand-sm navbar-dark bg-danger mb-3 py-0">
+      <div className="container">
+        <a href="#" className="navbar-brand">
+          {Heading}
+        </a>
+      </div>
+      <div>
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item">
+            <a href="" className="nav-link">
+              Home
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 };
 
@@ -18,11 +31,6 @@ Header.defaultProps = {
 /*Handles the validation of Props Type*/
 Header.propTypes = {
   Heading: PropTypes.string.isRequired
-};
-
-const headingStyle = {
-  color: "blue",
-  fontSize: 25
 };
 
 export default Header;
